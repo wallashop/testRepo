@@ -11,5 +11,4 @@ steps:
     image : node:latest
     commands :
        - npm install -g mocha
-       - npm start
-       
+       - npm test
