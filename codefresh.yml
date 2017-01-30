@@ -1,0 +1,15 @@
+version: '1.0'
+steps:
+  build_the_image:
+    type: build
+    description: Builds my service
+    dockerfile:  Dockerfile
+    image_name: verchol/myservice
+    tag:  ${{CF_BRANCH}}
+
+  run_test:
+    image : node:latest
+    commands :
+       - npm install -g mocha
+       - npm start
+       
