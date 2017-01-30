@@ -6,7 +6,7 @@ services:
   - docker
 
 before_install:
-
+ - npm install -g mocha
 
 script:
   - docker build .
