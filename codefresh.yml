@@ -12,3 +12,11 @@ steps:
     commands :
        - npm install -g mocha
        - npm test
+
+  docker_access:
+    type: docker
+    tag: ci
+    commands:
+      - docker build .
+      - docker-compose up -d
+      - curl localhost:1000
